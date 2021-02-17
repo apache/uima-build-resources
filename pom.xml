@@ -28,7 +28,7 @@
   </parent>
 
   <artifactId>uima-build-resources</artifactId>
-  <version>6</version>
+  <version>7-SNAPSHOT</version>
 
   <name>Apache UIMA ${project.artifactId}</name>
   <description>This JAR contains resources
@@ -48,7 +48,7 @@
     <url>
       https://github.com/apache/uima-build-resources/tree/master
     </url>
-    <tag>uima-build-resources-6</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
