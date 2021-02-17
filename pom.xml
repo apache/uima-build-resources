@@ -33,7 +33,7 @@
   <version>6-SNAPSHOT</version>
 
   <name>Apache UIMA ${project.artifactId}</name>
-  <description>This Jar contains resources
+  <description>This JAR contains resources
     referred to by maven coordinates,
     needed during building
   </description>
@@ -53,8 +53,8 @@
   </scm>
 
   <properties>
-    <jiraVersion>12321548</jiraVersion>
-    <uimaWebsiteUrl>http://uima.apache.org</uimaWebsiteUrl>
+    <jiraVersion>12349391</jiraVersion>
+    <uimaWebsiteUrl>https://uima.apache.org</uimaWebsiteUrl>
     <uimaWebsiteDistributionUrl>scp://people.apache.org/www/uima.apache.org/</uimaWebsiteDistributionUrl>
   </properties>
 
