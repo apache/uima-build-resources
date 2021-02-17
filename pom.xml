@@ -26,7 +26,7 @@
     <groupId>org.apache.uima</groupId>
     <artifactId>parent-pom</artifactId>
     <version>13</version>
-    <relativePath/>
+    <relativePath />
   </parent>
 
   <artifactId>uima-build-resources</artifactId>
@@ -69,6 +69,26 @@
             <goals>
               <goal>bundle</goal>
             </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.rat</groupId>
+        <artifactId>apache-rat-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>default-cli</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>verify</phase>
+            <!-- default configuration -->
+            <configuration>
+              <excludes combine.children="append">
+                <exclude>.github/PULL_REQUEST_TEMPLATE.md</exclude>
+              </excludes>
+            </configuration>
           </execution>
         </executions>
       </plugin>
