@@ -17,23 +17,21 @@
   specific language governing permissions and limitations
   under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.apache.uima</groupId>
     <artifactId>parent-pom</artifactId>
     <version>13</version>
-    <relativePath/>
+    <relativePath />
   </parent>
 
   <artifactId>uima-build-resources</artifactId>
-  <version>6-SNAPSHOT</version>
+  <version>7-SNAPSHOT</version>
 
   <name>Apache UIMA ${project.artifactId}</name>
-  <description>This Jar contains resources
+  <description>This JAR contains resources
     referred to by maven coordinates,
     needed during building
   </description>
@@ -50,11 +48,12 @@
     <url>
       https://github.com/apache/uima-build-resources/tree/master
     </url>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
-    <jiraVersion>12321548</jiraVersion>
-    <uimaWebsiteUrl>http://uima.apache.org</uimaWebsiteUrl>
+    <jiraVersion>12349391</jiraVersion>
+    <uimaWebsiteUrl>https://uima.apache.org</uimaWebsiteUrl>
     <uimaWebsiteDistributionUrl>scp://people.apache.org/www/uima.apache.org/</uimaWebsiteDistributionUrl>
   </properties>
 
@@ -69,6 +68,26 @@
             <goals>
               <goal>bundle</goal>
             </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.rat</groupId>
+        <artifactId>apache-rat-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>default-cli</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>verify</phase>
+            <!-- default configuration -->
+            <configuration>
+              <excludes combine.children="append">
+                <exclude>.github/PULL_REQUEST_TEMPLATE.md</exclude>
+              </excludes>
+            </configuration>
           </execution>
         </executions>
       </plugin>
