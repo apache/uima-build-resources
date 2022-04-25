@@ -87,6 +87,9 @@
               <excludes combine.children="append">
                 <!-- These configuration files cannot bear a license header -->
                 <exclude>.github/**/*</exclude>
+                <!-- These files are generated -->
+                <exclude>src/main/resources/docbook-shared/titlepage/html.xsl</exclude>
+                <exclude>src/main/resources/docbook-shared/titlepage/pdf.xsl</exclude>
               </excludes>
             </configuration>
           </execution>
