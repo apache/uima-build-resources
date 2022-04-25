@@ -23,7 +23,7 @@
   <parent>
     <groupId>org.apache.uima</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>13</version>
+    <version>14</version>
     <relativePath />
   </parent>
 
@@ -85,7 +85,8 @@
             <!-- default configuration -->
             <configuration>
               <excludes combine.children="append">
-                <exclude>.github/PULL_REQUEST_TEMPLATE.md</exclude>
+                <!-- These configuration files cannot bear a license header -->
+                <exclude>.github/**/*</exclude>
               </excludes>
             </configuration>
           </execution>
